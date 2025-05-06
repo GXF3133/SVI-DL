@@ -1,1 +1,1 @@
-Put the validation label here[1].
+Put the validation label here(Mark it as 0 above the first arrival, and mark it as 1 below the first arrival).
