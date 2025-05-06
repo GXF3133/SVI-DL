@@ -15,10 +15,15 @@ Then run train.py to conduct deep learning training.
 Lastly, run predict.py to conduct deep learning prediction.
 
 model: Code for building the DL (Deep Learning) model
+
 train_utils: Code for training and validation related tools
+
 dataset.py: Code for reading the dataset
+
 train.py: Code for DL training
+
 predict.py: Code for DL prediction
+
 compute_mean_std.py: Code for calculating the mean and standard deviation of each channel of the dataset
 
 #  REFERENCE
