@@ -1,1 +1,2 @@
-Put the training mask here(255).
+Put the training mask here(Mark it as 0 above the first arrival, and mark it as 255 below the first arrival).
+If there is no need to calculate the mean value and variance, then there is no need to put anything in this file.
