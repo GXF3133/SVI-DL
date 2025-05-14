@@ -117,7 +117,7 @@ for S=1:ns
                 closest_idx_in_A = idx(closest_idx_in_more);
                 for A=closest_idx_in_A:B
                     k3=inputdata{S,1}(1:nt,A);
-                    res=deconv(k3,flipud(VI1{B,1}(nt:2*nt-1,A)),nt);
+                    res=convn(k3,(VI1{B,1}(nt:2*nt-1,A)));
                     SVI1{S,1}(:,B)=SVI1{S,1}(:,B)+res;
                 end
             else
@@ -131,7 +131,7 @@ for S=1:ns
                 closest_idx_in_A = idx(closest_idx_in_less);
                 for A=B:closest_idx_in_A
                     k3=inputdata{S,1}(1:nt,A);
-                    res=deconv(k3,flipud(VI1{B,1}(nt:2*nt-1,A)),nt);
+                    res=convn(k3,(VI1{B,1}(nt:2*nt-1,A)));
                     SVI1{S,1}(:,B)=SVI1{S,1}(:,B)+res;
                 end
             else
@@ -146,13 +146,13 @@ for S=1:ns
         if R_coor(B)>=S_coor(S)
             for A=B:nx
                 k3=inputdata{S,1}(1:nt,A);
-                res=deconv(k3,flipud(VI2{B,1}(1:nt,A)),nt);
+                res=convn(k3,(VI2{B,1}(1:nt,A)));
                 SVI2{S,1}(:,B)=SVI2{S,1}(:,B)+res;
             end
         elseif R_coor(B)<S_coor(S)
             for A=1:B
                 k3=inputdata{S,1}(1:nt,A);
-                res=deconv(k3,flipud(VI2{B,1}(1:nt,A)),nt);
+                res=convn(k3,(VI2{B,1}(1:nt,A)));
                 SVI2{S,1}(:,B)=SVI2{S,1}(:,B)+res;
             end
         end
